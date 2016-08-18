@@ -1,0 +1,46 @@
+<template>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse"
+                       data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                       aria-controls="collapseTwo">
+                        Sessions
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel"
+                 aria-labelledby="headingTwo">
+                <ul class="list-group">
+                    <li repeat.for="session of SessionsList">
+                        <a route-href="route:sessionDetail; params.bind:{ id:session.id }"
+                           class="session list-group-item">
+
+                            <h4 class="list-group-item-heading">${session.title}</h4>
+                            <!--<i class="favorite fa fa-heart fa-2x pull-right"></i>-->
+                            <ul class="list-inline list-unstyled small">
+                                <li>
+                                    <i class="fa fa-user fa-fw"></i>
+                                    ${session.formattedPresenters}
+                                </li>
+                                <li>
+                                    <i class="fa fa-calendar fa-fw"></i>
+                                    ${session.startdate}
+                                    from
+                                    ${session.formattedSessionTime}
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker fa-fw"></i>
+                                    ${session.formattedRooms}
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</template>
+

@@ -1,0 +1,22 @@
+<template>
+    <div class="speaker-list">
+        <a route-href="route:speakerDetail; params.bind:{ id:speaker.id }"
+           repeat.for="speaker of speakerList"
+           class="list-group-item speaker">
+
+            <div class="media">
+                <div class="media-object pull-left">
+                    <img src="${speaker.gravatarUrl}" 
+                         alt="${speaker.firstName} ${speaker.lastName}"
+                         class="speaker-img img-rounded" />
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">
+                        ${speaker.firstName} ${speaker.lastName}
+                    </h4>
+                </div>
+            </div>
+        </a>
+    </div>
+</template>
+

@@ -1,0 +1,18 @@
+<template>
+    <require from="./jspm_packages/github/FortAwesome/Font-Awesome@4.6.3/css/font-awesome.min.css"></require>
+    <require from="./views/navigation.html"></require>
+    <require from="./css/bootstrap-slate.min.css"></require>
+    <require from="./jspm_packages/github/jasny/bootstrap@3.1.3/css/jasny-bootstrap.min.css"></require>
+    <require from="./css/site.css"></require>
+
+    <navigation router.bind="router"></navigation>
+
+    <div class="container-fluid body-content">
+        <div class="row">
+            <router-view></router-view>
+        </div>
+        <footer>
+            <p>&copy; 2016 - Built for Codemash</p>
+        </footer>
+    </div>
+</template>

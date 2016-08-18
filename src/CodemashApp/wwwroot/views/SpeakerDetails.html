@@ -1,0 +1,25 @@
+<template>
+    <a route-href="route:speakers" class="back-button"><i class="fa fa-angle-double-left"></i> Back</a>
+    <div class="well">
+        <div class="text-center">
+            <img src="${speaker.gravatarUrl}"
+                 title="${speaker.firstName} ${speaker.lastName}" 
+                 alt="${speaker.firstName} ${speaker.lastName}"
+                 class="img-rounded" />
+            <h3>${speaker.firstName} ${speaker.lastName}</h3>
+        </div>
+        <p>${speaker.biography}</p>
+
+        <h4 class="list-group-item-heading">Sessions</h4>
+        <div class="list-group">
+            <div repeat.for="session of sessions">
+                <div class="list-group-item">
+                    <h4 class="list-group-item-heading">${session.title}</h4>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</template>
+

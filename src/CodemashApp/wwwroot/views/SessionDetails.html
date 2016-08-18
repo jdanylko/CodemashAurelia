@@ -1,0 +1,30 @@
+<template>
+    <a route-href="route:sessions" class="back-button">
+        <i class="fa fa-angle-double-left"></i> Back
+    </a>
+    <div class="list-group-item session-info" data-id="${session.id}">
+        <h4 class="list-group-item-heading">${session.title}</h4>
+        <ul class="list-inline list-unstyled small">
+            <li>
+                <i class="fa fa-user fa-fw"></i>
+                ${session.formattedPresenters}
+            </li>
+            <li>
+                <i class="fa fa-calendar fa-fw"></i>
+                ${session.startdate}
+                from
+                ${session.formattedSessionTime}
+            </li>
+            <li>
+                <i class="fa fa-map-marker fa-fw"></i>
+                ${session.formattedRooms}
+            </li>
+            <li></li>
+        </ul>
+
+
+        <p class="list-group-item-text">${session.abstract}</p>
+        
+    </div>
+</template>
+

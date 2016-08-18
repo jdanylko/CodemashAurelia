@@ -1,0 +1,26 @@
+<template bindable="router">
+
+    <nav id="codemashMenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+        <span class="navmenu-brand">Menu</span>
+        <ul class="nav navmenu-nav">
+            <li repeat.for="row of router.navigation">
+                <a href.bind="row.href"><i class="fa fa-2x fa-fw"></i> ${row.title}</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <i class="fa fa-bars fa-2x pull-left" data-toggle="offcanvas" data-target="#codemashMenu" data-canvas="body"></i>
+        <img src="http://www.codemash.org/wp-content/themes/codemash/images/codemash-icon.png"
+             class="pull-left img-responsive" alt="Codemash logo" data-toggle="offcanvas"
+             data-target="#codemashMenu" data-canvas="body" height="25" />
+        <span class="heading">Codemash <span class="small">2.0.1.6</span></span>
+        <div class="navbar-right">
+            <span if.bind="router.isNavigating"
+                  class="loading-status fa fa-spinner fa-spin fa-2x">
+
+            </span>
+        </div>
+    </div>
+
+</template>
